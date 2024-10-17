@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SPC LOCALE</title>
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/logo.png" type="image">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      background-color: rgb(207, 223, 230);
+    }
+
+    h1 {
+      font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .navbar-brand {
+      background-image: url('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/sanpabLogo.png?token=GHSAT0AAAAAACZD2UOMMUSEOM5EIDP6ITCGZYRMAMQ');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 100px;
+      height: 50px;
+    }
+
+    .nav-link {
+      color: rgb(8, 8, 8);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #1100fc;
+      transform: scale(1.1);
+      text-decoration: none;
+    }
+
+    .nav-item.active .nav-link {
+      color: #1100fc;
+      font-weight: bold;
+      border-bottom: 5px solid #1100fc;
+      ;
+    }
+
+    .navbar-toggler {
+      border-color: white;
+    }
+
+    .navbar-toggler-icon {
+      background-color: none;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+      }
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar {
+        padding: 0.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .navbar-toggler {
+        position: absolute;
+        right: 20px;
+        top: 10px;
+      }
+
+      .collapse {
+        display: none !important;
+      }
+
+      .collapse.show {
+        display: block !important;
+      }
+    }
+
+    .custom-navbar-bg {
+      background-color: rgb(127, 190, 218);
+      position: relative;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+
+    .btn {
+      background-color: rgb(127, 190, 218);
+      color: #1a1a1a;
+    }
+
+    .custom-video-container {
+      border: 10px solid rgb(127, 190, 218);
+      max-width: 800px;
+      margin: auto;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .card {
+      height: 430px;
+    }
+
+    .card p {
+      text-align: justify;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .carousel-item {
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      color: #0f0f0f;
+    }
+
+
+    .responsive-text {
+      font-size: 1.25rem;
+    }
+
+    @media (min-width: 576px) {
+      .responsive-text {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .responsive-text {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar-bg shadow">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-3" href="index.html"></a>
+        <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item px-2">
+              <a class="nav-link" href="index.html"><strong>Home</strong></a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#discover"><strong>Discover</strong></a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#about"><strong>About</strong></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- carousel -->
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <h1 class="display-3 pt-5 text-center"><strong>Kaalaman Patungkol sa Lungsod</strong></h1>
+      <div class="col-12">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+              aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/festival.jpg?token=GHSAT0AAAAAACZD2UOMHWPHZDGFLAJFI7MAZYRL4XQ" class="d-block w-100 mt-3" alt="San Pablo City">
+            </div>
+            <div class="carousel-item">
+              <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/sanpy2.jpg?token=GHSAT0AAAAAACZD2UONE4YU4DCZWFLKSQKWZYRMAPA" class="d-block w-100 mt-3" alt="San Pablo City">
+            </div>
+            <div class="carousel-item">
+              <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/sanpy3.jpg?token=GHSAT0AAAAAACZD2UON25F6OIFJTPXWWJG6ZYRMASA" class="d-block w-100 mt-3" alt="San Pablo City">
+            </div>
+
+            <div class="carousel-item">
+              <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/cocofest.jpg?token=GHSAT0AAAAAACZD2UON64GQNCZCNUZPBDAIZYRL4UA" class="d-block w-100 mt-3" alt="San Pablo City">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-12">
+        <p class="responsive-text pt-3 mx-3" style="text-align: justify;">
+          Ang Lungsod ng San Pablo ay isang unang klaseng lungsod na matatagpuan sa lalawigan ng Laguna, Philippines.
+          Kilala ito bilang "City of Seven Lakes" o "Lungsod ng Pitong Lawa" dahil sa mga tanyag na lawa nito
+          tulad ng Sampaloc, Pandin, Yambo, Bunot, Palakpakin, Muhikap, at Calibato. Ang mga lawa ay
+          paboritong pasyalan ng mga lokal at turista, na nag-aalok ng tanawin at mga aktibidad tulad ng
+          boating at swimming.
+        </p>
+        <p class="responsive-text pt-3 mx-3" style="text-align: justify;">
+          Bilang isang progresibong lungsod, ang San Pablo ay may aktibong ekonomiya na nakasentro sa agrikultura,
+          industriya, at kalakalan. Kasama sa mga produkto nito ang niyog, palay, at mga gulay. Mayaman din
+          ang lungsod sa kultura at kasaysayan, at tuwing Enero ay ipinagdiriwang ang Coconut Festival bilang
+          parangal sa pangunahing produktong niyog ng lungsod.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- tourist spots -->
+  <div class="container" id="discover">
+    <div class="row my-5">
+      <h1 class="display-3 pt-2" style="text-align: center;"><strong>Mga Tourist Spots</strong></h1>
+    </div>
+
+    <div class="row my-5">
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/sampaloc.jpg?token=GHSAT0AAAAAACZD2UON65OPELFBS7KVDRIIZYRMAJQ" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Sampaloc Lake</h5>
+            <p class="card-text">A picturesque lake surrounded by lush greenery, offering serene views and recreational
+              activities such as jogging and picnicking.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/sampaloc.jpg?token=GHSAT0AAAAAACZD2UON65OPELFBS7KVDRIIZYRMAJQ', 'Sampaloc Lake')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/pandin.jpg?token=GHSAT0AAAAAACZD2UONPU4TB7TG5FAMSUAYZYRL6ZA" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Pandin Lake</h5>
+            <p class="card-text">Known for its crystal-clear waters and stunning landscapes, this lake is perfect for
+              swimming, bamboo rafting, and enjoying local cuisine.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/pandin.jpg?token=GHSAT0AAAAAACZD2UONPU4TB7TG5FAMSUAYZYRL6ZA', 'Pandin Lake')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/yambo.jpg?token=GHSAT0AAAAAACZD2UOMV2STWP5KFGQ5FHZWZYRMAYQ" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Yambo Lake</h5>
+            <p class="card-text">A tranquil, lesser-known lake ideal for peaceful retreats, surrounded by scenic hills
+              and perfect for leisurely walks.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/yambo.jpg?token=GHSAT0AAAAAACZD2UOMV2STWP5KFGQ5FHZWZYRMAYQ', 'Yambo Lake')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/bunot.jpg?token=GHSAT0AAAAAACZD2UOMLXK4NOO3KVWPO66IZYRL36A" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Bunot Lake</h5>
+            <p class="card-text">Renowned for its vibrant ecosystem, this lake offers a scenic spot for fishing and
+              enjoying the beautiful sunset views.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/bunot.jpg?token=GHSAT0AAAAAACZD2UOMLXK4NOO3KVWPO66IZYRL36A', 'Bunot Lake')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/palakpakin.jpg?token=GHSAT0AAAAAACZD2UONUCPHLQT7J46PRXMEZYRL6WA" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Palakpakin Lake</h5>
+            <p class="card-text">A beautiful lake that provides a serene setting for fishing and nature walks,
+              surrounded by lush vegetation and vibrant wildlife.</p>
+            <a href="#" class="btn btn-primary"
+              onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/palakpakin.jpg?token=GHSAT0AAAAAACZD2UONUCPHLQT7J46PRXMEZYRL6WA', 'Palakpakin Lake')">View Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/mohicap.jpg?token=GHSAT0AAAAAACZD2UONOWRNKDDR6OYMJEBUZYRL6UA" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Muhikap Lake</h5>
+            <p class="card-text"> A quaint lake ideal for relaxation and family outings, featuring stunning views and a
+              peaceful atmosphere.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/mohicap.jpg?token=GHSAT0AAAAAACZD2UONOWRNKDDR6OYMJEBUZYRL6UA', 'Muhikap Lake')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/calibato.jpg?token=GHSAT0AAAAAACZD2UOMLHDOIH3VGPNM2RTOZYRL4MA" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Calibato Lake</h5>
+            <p class="card-text">This picturesque lake is known for its clear waters and tranquil environment, perfect
+              for picnics and unwinding in nature.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/calibato.jpg?token=GHSAT0AAAAAACZD2UOMLHDOIH3VGPNM2RTOZYRL4MA', 'Calibato Lake')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/villaEscudero.jpg?token=GHSAT0AAAAAACZD2UOMU3ZXT6R2WNGN2KQ6ZYRMAVQ" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Villa Escudero</h5>
+            <p class="card-text"> A popular cultural resort offering visitors a glimpse into Filipino heritage through
+              traditional activities, dining by the waterfalls, and a museum showcasing historical artifacts.</p>
+            <a href="#" class="btn btn-primary"
+              onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/villaEscudero.jpg?token=GHSAT0AAAAAACZD2UOMU3ZXT6R2WNGN2KQ6ZYRMAVQ', 'Villa Escudero')">View Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/batoSpring.jpg?token=GHSAT0AAAAAACZD2UONXCZ2VZCEKI5NXNFQZYRLYJQ" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Bato Springs Resort</h5>
+            <p class="card-text">A family-friendly resort featuring natural springs and pools, perfect for swimming and
+              relaxation amidst lush surroundings.</p>
+            <a href="#" class="btn btn-primary"
+              onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/batoSpring.jpg?token=GHSAT0AAAAAACZD2UONXCZ2VZCEKI5NXNFQZYRLYJQ', 'Bato Springs Resort')">View Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/cathedral.jpg?token=GHSAT0AAAAAACZD2UOMQNVZRVFDV6GJW4LOZYRL4QQ" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Cathedral Parish of Saint Paul the First Hermit</h5>
+            <p class="card-text">An impressive historical church known for its beautiful architecture and serene
+              ambiance, making it a popular place for worship and reflection.</p>
+            <a href="#" class="btn btn-primary"
+              onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/cathedral.jpg?token=GHSAT0AAAAAACZD2UOMQNVZRVFDV6GJW4LOZYRL4QQ', 'Cathedral Parish of Saint Paul the First Hermit')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/park.jpg?token=GHSAT0AAAAAACZD2UOM3GH74JCTT4GOLJ6CZYRL64A" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Doña Leonila Park</h5>
+            <p class="card-text">A scenic park ideal for outdoor activities, featuring walking paths, playgrounds, and
+              areas for family gatherings.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/park.jpg?token=GHSAT0AAAAAACZD2UOM3GH74JCTT4GOLJ6CZYRL64A', 'Doña Leonila Park')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="card m-3 shadow">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/casa.jpg?token=GHSAT0AAAAAACZD2UOMQJTKWA6LT632NYQ6ZYRL4OQ" class="card-img-top">
+          <div class="card-body d-flex flex-column align-items-center">
+            <h5 class="card-title">Casa San Pablo</h5>
+            <p class="card-text">A charming bed-and-breakfast known for its rustic ambiance, beautiful gardens, and
+              commitment to showcasing local art and culture.</p>
+            <a href="#" class="btn btn-primary" onclick="showImageModal('https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/casa.jpg?token=GHSAT0AAAAAACZD2UOMQJTKWA6LT632NYQ6ZYRL4OQ', 'Casa San Pablo')">View
+              Image</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Full Image</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img id="modalImage" src="" class="img-fluid" alt="Full Image">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="about">
+    <div class="row my-5">
+      <h1 class="display-3 pt-2" style="text-align: center;"><strong>Ang Lungsod ng Pitong Lawa</strong></h1>
+    </div>
+
+    <div class="container my-5">
+      <div class="ratio ratio-16x9 custom-video-container shadow">
+        <iframe src="https://www.youtube.com/embed/WGXW7YlEcLE" title="San Pablo City Laguna" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-5">
+      <div class="container-fluid d-flex justify-content-center">
+        <a href="index.html"><img src="./assets/sanpabLogo.png" alt="Logo" class="img-fluid"
+            style="max-width: 150px;"></a>
+      </div>
+
+      <div class="container-fluid d-flex justify-content-center mt-4">
+        <a href="https://facebook.com" class="mx-3" target="_blank">
+          <i class="fab fa-facebook-f fa-2x"></i>
+        </a>
+        <a href="https://instagram.com" class="mx-3" target="_blank">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://twitter.com" class="mx-3" target="_blank">
+          <i class="fab fa-twitter fa-2x"></i>
+          <a href="https://youtube.com" class="mx-3" target="_blank">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+      </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+  </script>
+<script>
+
+  function toggleNavbar() {
+    const navbar = document.getElementById('navbarNav');
+    if (navbar.classList.contains('show')) {
+      navbar.classList.remove('show');
+    } else {
+      navbar.classList.add('show');
+    }
+  }
+
+
+  function showImageModal(imageSrc, title) {
+    document.getElementById('modalImage').src = imageSrc;
+    document.getElementById('imageModalLabel').innerText = title;
+
+    var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    myModal.show();
+  }
+
+</script>
+</body>
+
+</html>

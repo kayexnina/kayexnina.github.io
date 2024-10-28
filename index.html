@@ -613,11 +613,11 @@
     </div>
   </div>
 
-<div class="container text-center mt-4" id="resume">
-  <a href="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/main/singlePageResume.pdf" download class="btn display-3 rounded-2 py-3 px-4">
-    Download My Resume (PDF)
-  </a>
-</div>
+  <div class="container text-center mt-4" id="resume">
+    <a href="#" onclick="downloadResume()" class="btn display-3 rounded-2 py-3 px-4">
+      Download My Resume (PDF)
+    </a>
+  </div>
 
   <!-- works -->
   <div class="container" id="works">
@@ -840,6 +840,15 @@
     window.addEventListener("load", run);
     window.addEventListener("resize", run);
 
+    //Resume
+    function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/main/singlePageResume.pdf';
+    link.download = 'Cristobal, K_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); 
+  }
   </script>
 </body>
 

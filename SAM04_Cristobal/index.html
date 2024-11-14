@@ -4,36 +4,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Stranger Things</title>
-  <link rel="shortcut icon" href="https://raw.githubusercontent.com/kayexnina/SAMA02_Cristobal/refs/heads/main/assets/logo.png" type="image">
+  <title>Grey's Anatomy</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
   <style>
+    :root {
+      --primary-color: #112967;
+      --secondary-color: #ffffff;
+    }
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif
+    }
+
+    body {
+      background-image: url('bgImage.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+    }
+
+    /* For mobile screens (smallest devices) */
+    @media (max-width: 575px) {
+      body {
+        background-image: url('bgMobile.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+    }
+
+    .btn {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-size: 16px;
+      border: 1px solid var(--secondary-color);
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      text-decoration: none;
+      border: 1px solid var(--primary-color);
+    }
   </style>
 </head>
 
 <body>
-
-
-  
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-  </script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
-  </script>
-
-<script>
-
-</script>
+  <div class="container-fluid">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+      <div class="col-12 col-lg-6 col-md-6 text-center">
+        <h1 class="display-5 text-light" style="font-weight: bolder;">Grey's Anatomy</h1>
+        <p class="text-light">
+          The doctors of Grey Sloan Memorial Hospital deal with life-or-death consequences on a daily basis -- it's in
+          one another that they find comfort, friendship and, at times, more than friendship. Together they're
+          discovering that neither medicine nor relationships can be defined in black and white. Real life only comes in
+          shades of grey.
+        </p>
+        <a href="list.html" class="btn display-3 rounded-5 py-3 px-5"><strong>Learn More</strong></a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

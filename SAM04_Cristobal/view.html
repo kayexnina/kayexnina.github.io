@@ -8,22 +8,84 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-        .imgContainer {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
+        :root {
+            --primary-color: rgb(17, 41, 103);
+            --secondary-color: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-image: url(./mainBg.png);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .card {
+            border: 1px solid #f1f1f1;
+            box-shadow: 0 0 15px 2px rgba(17, 41, 103, 0.8);
+            width: 18rem;
             overflow: hidden;
-            margin-bottom: 20px;
+        }
+
+        .card-header {
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .imgContainer {
+            width: 100%;
+            height: 200px;
         }
 
         .imgContainer img {
-            width: 100%;
-            height: auto;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
-        .card-body {
-            text-align: center;
+        .card-title {
+            font-size: 2rem;
+            font-weight: bolder;
+            margin-bottom: 10px;
         }
+
+        .card-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 16px;
+            border: 1px solid var(--secondary-color);
+            transition: background-color 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border: 1px solid var(--primary-color);
+        }
+
     </style>
 </head>
 
@@ -31,27 +93,30 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col text-center">
-                <div class="card mx-auto" style="width: 18rem;">
-                    <div class="imgContainer" id="characterImageContainer">
+                <div class="card mx-auto">
+                    <div class="card-header" id="cardHeader">
+                        Character Details
+                    </div>
+
+                    <div class="imgContainer d-flex justify-content-center align-items-center"
+                        id="characterImageContainer">
                         <img id="characterImage" alt="Character Image">
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title" id="characterName"></h5>
-                        <p class="card-text" id="personName"></p>
-                        <p class="card-text" id="birthday"></p>
-                        <p class="card-text" id="gender"></p>
-                        <a href="#" id="characterLink" class="btn btn-primary" target="_blank">Learn More</a>
+
+                    <div class="card-body text-center p-3">
+                        <h5 class="card-title mb-4" id="characterName"></h5>
+                        <p class="card-text mb-2" id="personName"></p>
+                        <p class="card-text mb-2" id="birthday"></p>
+                        <p class="card-text mb-2" id="gender"></p>
+                        <a href="#" id="characterLink" class="btn" target="_blank">Learn More</a>
+                        <button onclick="goBack()" class="btn btn-primary">Back</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
     <script>
-        // Extract parameters from URL
         const urlParams = new URLSearchParams(window.location.search);
 
         // Get individual parameters
@@ -62,13 +127,26 @@
         const characterLink = urlParams.get("characterLink");
         const characterImage = urlParams.get("characterImage");
 
-        // Populate the HTML with the extracted data
+        // Set the card color based on the gender
+        const cardHeader = document.getElementById("cardHeader");
+
+        if (gender === "Female") {
+            cardHeader.style.backgroundColor = "rgba(255, 105, 180, 0.7)"; 
+        } else {
+            cardHeader.style.backgroundColor = "rgba(70, 130, 180, 0.7)";  
+        }
+
         document.getElementById("characterName").innerText = characterName || "No character name available";
         document.getElementById("personName").innerText = `Actor: ${personName || "N/A"}`;
         document.getElementById("birthday").innerText = `Birthday: ${birthday || "N/A"}`;
         document.getElementById("gender").innerText = `Gender: ${gender || "N/A"}`;
         document.getElementById("characterLink").href = characterLink || "#";
-        document.getElementById("characterImage").src = characterImage || "https://via.placeholder.com/200";
+        document.getElementById("characterImage").src = characterImage || "https://via.placeholder.com/150";
+
+        // Back
+        function goBack() {
+            window.location.href = './list.html';
+        }
     </script>
 
 </body>

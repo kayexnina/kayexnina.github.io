@@ -128,7 +128,7 @@
         const characterLink = urlParams.get("characterLink");
         const characterImage = urlParams.get("characterImage");
 
-        // Set the card color based on the gender
+        // Gender
         const cardHeader = document.getElementById("cardHeader");
 
         if (gender === "Female") {
@@ -146,8 +146,7 @@
 
         // Back
         function goBack() {
-            // Retrieve the last page number from sessionStorage
-            const lastPage = sessionStorage.getItem('lastPage') || 1; // Default to page 1 if not found
+            const lastPage = sessionStorage.getItem('lastPage') || 1;
             window.location.href = `list.html?page=${lastPage}`;
         }
 

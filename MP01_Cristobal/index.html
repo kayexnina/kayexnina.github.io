@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> BINI </title>
-  <!-- <link rel="shortcut icon" href="" type="image" /> -->
+  <link rel="shortcut icon" href="./assets/biniLogo.png" type="image" />
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
 </head>
 <style>
   :root {
@@ -23,12 +25,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
   }
 
   body {
     background-color: var(--background-color);
     color: var(--primary-color);
+    /* cursor: url(./assets/biniLogo2.jpg), pointer; */
   }
 
   html {
@@ -115,6 +118,139 @@
     color: var(--primary-color);
   }
 
+  /* start dito ng video */
+  .vidcontainer {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .video {
+    position: absolute;
+    width: 4000px;
+    height: 100%;
+    pointer-events: none;
+    margin-left: 50%;
+    transform: translate(-50%);
+    z-index: 0;
+    /* Ensure the video stays behind the other elements */
+  }
+
+  .btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid var(--secondary-color);
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+  }
+
+  .bannercolor {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    /* Ensure this layer is above the video */
+  }
+
+  /* Card Container */
+  .card {
+    background-color: rgba(255, 255, 255, 0.226);
+    border: none;
+    border-radius: 10px;
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Image Container */
+  .imgContainer {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  /* Flip Card Styles */
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    /* Mini photocard size */
+    height: 500px;
+    border: none;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 30px;
+  }
+
+  .flip-card-front {
+    background-color: #bbb;
+  }
+
+  .flip-card-front img {
+    border-radius: 30px;
+  }
+
+  .flip-card-back {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transform: rotateY(180deg);
+  }
+
+  /* Logo Styling */
+  .logo-img {
+    width: 50px;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .iframe-container {
+  position: relative;
+  width: 100%;
+  /* Adjust the aspect ratio as needed, e.g., 16:9 */
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 </style>
 
 <body>
@@ -135,7 +271,7 @@
             <a class="nav-link" href="#members">Members</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#music">Top Music</a>
+            <a class="nav-link" href="#music">Top Songs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#articles">Articles</a>
@@ -145,16 +281,344 @@
     </div>
   </nav>
 
-  <div class="container">
-    <div class="row">
-        <div class="col">
-            
+  <div class="vidcontainer">
+    <iframe class="video" src="https://www.youtube.com/embed/rztcSEcwzuM?rel=0&controls=0&disablekb=1&autoplay=1&loop=1&mute=1"
+      title="Chapter 2: HERE WITH YOU Trailer | COMING SOON on iWantTFC!" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="bannercolor">
+    </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-center text-center" style="height: 100vh;">
+        <div class="col-10 col-lg-6 col-md-8">
+          <div class="card p-4">
+            <h1 class="display-5" style="font-weight: bolder; color: var(--secondary-color);">BINI</h1>
+            <p class="text-center text-light" style="font-size: medium;">
+              BINI is a rising Filipino girl group whose name comes from the word binibini, meaning "young lady." The
+              group is composed of talented members: Aiah, Colet, Gwen, Jhoanna, Maloi, Mikha, Sheena, and Stacey.
+              Despite their diverse personalities, origins, and beliefs, they come together in perfect harmony, united
+              by their passion for music and their love for one another. BINI continues to inspire audiences through
+              their synchronized artistry and unwavering dedication, proving that their love for music and each other is
+              their greatest strength.
+            </p>
+            <div class="col">
+              <a href="#members" class="btn display-3 rounded-5 py-2 px-4"><strong>Learn More</strong></a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <!-- <footer class="footer text-center py-5">
+  <!-- Members Section -->
+  <div class="container" id="members">
+    <!-- Title Section -->
+    <div class="row my-4">
+      <h1 class="display-3 text-center">
+        <img src="./assets/biniLogo.png" alt="BINI Logo" class="logo-img">
+        <strong>Members</strong>
+        <img src="./assets/biniLogo.png" alt="BINI Logo" class="logo-img">
+      </h1>
+    </div>
+
+    <!-- Member Cards -->
+    <div class="row">
+      <!-- Member 1 -->
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460350262_122174080766221695_5915746347831915964_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEykmFNFd8T2RlTWkzbvwMYcmVjaJyC_rtyZWNonIL-u1BAxppkg0x6p4UdDYebBBmIJRFN2gAs0A_emmGmaMBL&_nc_ohc=a_jCcpLL684Q7kNvgExt620&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=ArJNw_8cs4kXD7Ja-Wa7g0g&oh=00_AYDqQhZSiuKR01wWpRWxIzku7JtECaYj_uwmrQZAqYvTmw&oe=67413495"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Maraiah Queen Arceta</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: January 27, 2001 <br>
+                Birth Place: Lapu-Lapu City, Cebu, Philippines <br>
+                Nicknames: Aiahtot, Aiahkins <br>
+                Zodiac: Aquarius <br>
+                Height: 168 cm (5'6") <br>
+                Positions: Visual, Main Rapper <br>
+                Color: <span style="background-color: skyblue; border-radius: 5px; padding: 3px;">Sky Blue</span> <br>
+                Emoji: Dog
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460350262_122174080766221695_5915746347831915964_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEykmFNFd8T2RlTWkzbvwMYcmVjaJyC_rtyZWNonIL-u1BAxppkg0x6p4UdDYebBBmIJRFN2gAs0A_emmGmaMBL&_nc_ohc=a_jCcpLL684Q7kNvgExt620&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=ArJNw_8cs4kXD7Ja-Wa7g0g&oh=00_AYDqQhZSiuKR01wWpRWxIzku7JtECaYj_uwmrQZAqYvTmw&oe=67413495', 'Bini Aiah')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Member 2 (repeat for other members) -->
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460280377_122174080820221695_1821702065122888479_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFv5jV9COaAekwuGLo3mm8nJ-X-7TgH5i4n5f7tOAfmLtcVzU-I0WzjFBWrdN488L_GtuWSE7m8yuqZV-4JlOr9&_nc_ohc=K9CPn_8itssQ7kNvgHh2xYF&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=A95yR9shl_XMo6bkY-Dg9bT&oh=00_AYA1oxoOgGgq2jgXIUUuEObkBa71b_HL_t4AYVPgxLl5bQ&oe=67411F4D"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Maria Nicolette Vergara</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: September 14, 2001 <br>
+                Birth Place: Tagbilaran City, Bohol, Philippines <br>
+                Nicknames: Colet, Anger <br>
+                Zodiac: Virgo <br>
+                Height: 163.8 cm (5'4" ½) <br>
+                Positions: Main Vocal, Lead Dancer, Lead Rapper <br>
+                Color: <span style="background-color: green; border-radius: 5px; padding: 3px;">Green</span> <br>
+                Emoji: Wolf
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460280377_122174080820221695_1821702065122888479_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFv5jV9COaAekwuGLo3mm8nJ-X-7TgH5i4n5f7tOAfmLtcVzU-I0WzjFBWrdN488L_GtuWSE7m8yuqZV-4JlOr9&_nc_ohc=K9CPn_8itssQ7kNvgHh2xYF&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=A95yR9shl_XMo6bkY-Dg9bT&oh=00_AYA1oxoOgGgq2jgXIUUuEObkBa71b_HL_t4AYVPgxLl5bQ&oe=67411F4D', 'Bini Colet')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/459938319_122174080892221695_2513347257495871451_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFpgrtHFO8DQ25qDK0qun1Pj3kVLiMO9r-PeRUuIw72v-NhRUY4GWa0yBQ4LHzZnOKtI-WU3pjPW-N8ZtuiW2Nc&_nc_ohc=EXQC1gXes-QQ7kNvgGdzaWy&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=ABKMjGJPGBlwc5xTd4Qkqip&oh=00_AYABSz6qbYNZfly1xwbKC0EV8xhQyiIx4wNkMBaeC4wYLA&oe=6741159D"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Gweneth Apuli</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: June 19, 2003 <br>
+                Birth Place: Daraga, Albay Philippines <br>
+                Nickname: Gwenny <br>
+                Zodiac: Gemini <br>
+                Height: 168 cm (5'6") <br>
+                Positions: Lead Vocal, Lead Rapper <br>
+                Color: <span style="background-color: orangered; border-radius: 5px; padding: 3px;">Orange</span> <br>
+                Emoji: Koala
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-4.fna.fbcdn.net/v/t39.30808-6/459938319_122174080892221695_2513347257495871451_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeFpgrtHFO8DQ25qDK0qun1Pj3kVLiMO9r-PeRUuIw72v-NhRUY4GWa0yBQ4LHzZnOKtI-WU3pjPW-N8ZtuiW2Nc&_nc_ohc=EXQC1gXes-QQ7kNvgGdzaWy&_nc_zt=23&_nc_ht=scontent.fmnl13-4.fna&_nc_gid=ABKMjGJPGBlwc5xTd4Qkqip&oh=00_AYABSz6qbYNZfly1xwbKC0EV8xhQyiIx4wNkMBaeC4wYLA&oe=6741159D', 'Bini Gwen')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/460361766_122174080664221695_1390688473583180275_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHD1SoK_oyizE9A2cWMAHfftf-Rf47hCcO1_5F_juEJw1Qysu9aEVfbcCT6XB-UHTLLVsxGkfrj9D9DXkfOEyJP&_nc_ohc=aWLYTFhNlocQ7kNvgGPkMZE&_nc_zt=23&_nc_ht=scontent.fmnl13-1.fna&_nc_gid=A51ZPTYKZbhIGjSx4wvXPYu&oh=00_AYAzbMZubfNElOSdjJkQcHpKy7jXmSqB9kQZLV6MU1zvnA&oe=67413DD1"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Jhoanna Christine Robles</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: January 26, 2004 <br>
+                Birth Place: Calamba City, Laguna, Philippines <br>
+                Nicknames: Jho, JR , Maharani , Master Jho <br>
+                Zodiac: Aquarius <br>
+                Height: 168 cm (5'6") <br>
+                Positions: Leader, Lead Vocal, Lead Rapper <br>
+                Color: <span style="background-color: royalblue; border-radius: 5px; padding: 3px;">Royal Blue</span> <br>
+                Emoji: Chick
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/460361766_122174080664221695_1390688473583180275_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHD1SoK_oyizE9A2cWMAHfftf-Rf47hCcO1_5F_juEJw1Qysu9aEVfbcCT6XB-UHTLLVsxGkfrj9D9DXkfOEyJP&_nc_ohc=aWLYTFhNlocQ7kNvgGPkMZE&_nc_zt=23&_nc_ht=scontent.fmnl13-1.fna&_nc_gid=A51ZPTYKZbhIGjSx4wvXPYu&oh=00_AYAzbMZubfNElOSdjJkQcHpKy7jXmSqB9kQZLV6MU1zvnA&oe=67413DD1', 'Bini Jhoanna')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460207861_122174080838221695_4541591337273677354_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3ACJE9ii0GdRKIKFXXimYJcS53RM9VzclxLndEz1XNysbaqs9dSEKh75zxuPoD_Ce_fygq82MSI2ZlmTyu9KH&_nc_ohc=7uHGy21yljwQ7kNvgECPUev&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=AD2cI11r4KpzUCXqvTuKTpJ&oh=00_AYA6sLPtsIGaxje5CeaOVt2GUe5uoaIrRVdXsByT4Lkm2Q&oe=67410B4A"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Mary Loi Yves Ricalde</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: May 27, 2002 <br>
+                Birth Place: Lemery, Batangas Philippines <br>
+                Nicknames: Maloi, Lucky <br>
+                Zodiac: Gemini <br>
+                Height: 160 cm (5’3”) <br>
+                Positions: Main Vocalist <br>
+                Color: <span style="background-color: yellow; border-radius: 5px; padding: 3px;">Yellow</span> <br>
+                Emoji: Panda
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460207861_122174080838221695_4541591337273677354_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF3ACJE9ii0GdRKIKFXXimYJcS53RM9VzclxLndEz1XNysbaqs9dSEKh75zxuPoD_Ce_fygq82MSI2ZlmTyu9KH&_nc_ohc=7uHGy21yljwQ7kNvgECPUev&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=AD2cI11r4KpzUCXqvTuKTpJ&oh=00_AYA6sLPtsIGaxje5CeaOVt2GUe5uoaIrRVdXsByT4Lkm2Q&oe=67410B4A', 'Bini Maloi')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/460351791_122174081006221695_2711470567701530258_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHRlVaamiq48Kt91HIo9rE09hdhuPUZ4zL2F2G49RnjMmzS7zYOYLCTcJ4br7tsTeQWQIZia7LfdCNzpkPJDIGe&_nc_ohc=EX1Y6ha4SKwQ7kNvgEXmrUy&_nc_zt=23&_nc_ht=scontent.fmnl13-2.fna&_nc_gid=AlCmt37UtKbFR-9Tyb2ZYie&oh=00_AYBpWnvgLgLHTIvXfMqsd5i_7RVZavxR-iZlG-iZmmyKNQ&oe=67411D63"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Mikhaela Janna Lim</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: November 8, 2003 <br>
+                Birth Place: Cebu City, Philippines <br>
+                Nicknames: Mikha, Miks <br>
+                Zodiac: Scorpio <br>
+                Height: 166 cm (5’5”) <br>
+                Positions: Main Rapper, Lead Dancer, Visual <br>
+                Color: <span style="background-color: red; border-radius: 5px; padding: 3px;">Red</span> <br>
+                Emoji: Fox
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/460351791_122174081006221695_2711470567701530258_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHRlVaamiq48Kt91HIo9rE09hdhuPUZ4zL2F2G49RnjMmzS7zYOYLCTcJ4br7tsTeQWQIZia7LfdCNzpkPJDIGe&_nc_ohc=EX1Y6ha4SKwQ7kNvgEXmrUy&_nc_zt=23&_nc_ht=scontent.fmnl13-2.fna&_nc_gid=AlCmt37UtKbFR-9Tyb2ZYie&oh=00_AYBpWnvgLgLHTIvXfMqsd5i_7RVZavxR-iZlG-iZmmyKNQ&oe=67411D63', 'Bini Mikha')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/460100896_122174081042221695_2435900682540203672_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEA66u1chDL_om2pYDokmpujSFM1f8GM3iNIUzV_wYzeM4XCANBO4wWZsLLH_FjQuSBk0zubu1-hKeFTmxGaEiO&_nc_ohc=NJ214jXq938Q7kNvgHL9WTr&_nc_zt=23&_nc_ht=scontent.fmnl13-1.fna&_nc_gid=A7ttHz6LWYbk0g9T1YggurH&oh=00_AYBTLaHei18lUdKhVEehctgjEQfHAuOIa1Av_qLV3hegug&oe=67413868"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Sheena Mae Catacutan</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: May 9, 2004
+                <br>
+                Birth Place: 
+                Santiago City, Isabela, Philippines <br>
+                Nickname: Shee <br>
+                Zodiac: Aquarius <br>
+                Height: 165 cm (5’4 1/2”) <br>
+                Positions: Main Dancer <br>
+                Color: <span style="background-color: purple; border-radius: 5px; padding: 3px;">Purple</span> <br>
+                Emoji: Rabbit
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/460100896_122174081042221695_2435900682540203672_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEA66u1chDL_om2pYDokmpujSFM1f8GM3iNIUzV_wYzeM4XCANBO4wWZsLLH_FjQuSBk0zubu1-hKeFTmxGaEiO&_nc_ohc=NJ214jXq938Q7kNvgHL9WTr&_nc_zt=23&_nc_ht=scontent.fmnl13-1.fna&_nc_gid=A7ttHz6LWYbk0g9T1YggurH&oh=00_AYBTLaHei18lUdKhVEehctgjEQfHAuOIa1Av_qLV3hegug&oe=67413868', 'Bini Sheena')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3 my-4">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <!-- Front Side of the Card -->
+            <div class="flip-card-front">
+              <img src="./assets/biniPhotocard.png" class="img-fluid">
+            </div>
+            <!-- Back Side of the Card -->
+            <div class="flip-card-back d-flex flex-column justify-content-center align-items-center p-3">
+              <img
+                src="https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460221294_122174080952221695_9180718979513612076_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH4t-mohgMYc46-5f_FKdPJVDlK-vjlkQpUOUr6-OWRChGQkK-KAK3O-oQ762XP2gQOFcaQy9UrhAwNfmkNMdPE&_nc_ohc=WYRyAaVNKPMQ7kNvgGVjzPm&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=ADz7Q8TvUlePOI4Qtb6Pib0&oh=00_AYCbDbTJmOfDJxCTUpjiwDAov36pv2JcSpDH5kXfuGEqtw&oe=6741267E"
+                class="imgContainer">
+              <h5 class="card-title m-2" style="color: var(--secondary-color)">Lindtsey Stacey Aubrey Sevilleja</h5>
+              <p class="card-text text-start" style="font-size: small;">
+                Birthday: July 13, 2003 <br>
+                Birth Place: Nueva Vizcaya, Philippines <br>
+                Nickname: Staku <br>
+                Zodiac: Cancer <br>
+                Height: 167 cm (5’6”) <br>
+                Positions: Lead Rapper, Lead Dancer <br>
+                Color: <span style="background-color: pink; border-radius: 5px; padding: 3px;">Pink</span> <br>
+                Emoji: Cat
+              </p>
+              <a href="#" class="btn btn-primary"
+                onclick="showImageModal('https://scontent.fmnl13-3.fna.fbcdn.net/v/t39.30808-6/460221294_122174080952221695_9180718979513612076_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH4t-mohgMYc46-5f_FKdPJVDlK-vjlkQpUOUr6-OWRChGQkK-KAK3O-oQ762XP2gQOFcaQy9UrhAwNfmkNMdPE&_nc_ohc=WYRyAaVNKPMQ7kNvgGVjzPm&_nc_zt=23&_nc_ht=scontent.fmnl13-3.fna&_nc_gid=ADz7Q8TvUlePOI4Qtb6Pib0&oh=00_AYCbDbTJmOfDJxCTUpjiwDAov36pv2JcSpDH5kXfuGEqtw&oe=6741267E', 'Bini Stacey')">View
+                Image</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Music Section (Hindi pa nagana)-->
+<div class="container" id="music">
+  <div class="row my-4">
+    <h1 class="display-3 text-center">
+      <strong>Top Songs</strong>
+    </h1>
+  </div>
+  <!-- <div class="iframe-container"> -->
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-e0a096ab-5801-44df-9c8a-8530a13f163e" data-elfsight-app-lazy></div>
+  </div>
+
+<!-- Articles Section (No Style)-->
+<div class="container" id="articles">
+  <div class="row my-4">
+    <h1 class="display-3 text-center">
+      <strong>Articles</strong>
+    </h1>
+  </div>
+
+  <!-- Articles List -->
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <strong>Grand BINIverse Concert</strong>: BINI's "Grand BINIverse" concert will take place from November 16 to 18, 2024, at the Smart Araneta Coliseum. Special guest performances include OPM legends like Regine Velasquez-Alcasid and Gary Valenciano, alongside other artists such as Vice Ganda and Maymay Entrata. The event has sold out, but livestream tickets are still available. <a href="https://www.theglobalfilipinomagazine.com">Read more</a>.
+    </li>
+    <li class="list-group-item">
+      <strong>Award Recognition</strong>: BINI won the "Best Asia Act" at the 2024 MTV Europe Music Awards (EMA), beating artists like ILLIT from South Korea. This win emphasizes BINI's growing influence in the global music scene. <a href="https://www.theglobalfilipinomagazine.com">Read more</a>.
+    </li>
+    <li class="list-group-item">
+      <strong>Music Releases</strong>: BINI is releasing their albums "Born To Win," "Feel Good," and the EP "Talaarawan" on vinyl. Fans can also enjoy their first-ever holiday cover of "Joy To The World." <a href="https://www.billboard.com">Read more</a>.
+    </li>
+    <li class="list-group-item">
+      <strong>BINI’s "BINIverse" Concert Preparation</strong>: BINI's live band is gearing up for the three-day "BINIverse" concert, which will feature their hit songs and new arrangements. <a href="https://news.abs-cbn.com">Read more</a>.
+    </li>
+    <li class="list-group-item">
+      <strong>Christmas Music Releases</strong>: BINI has released a Christmas remix of "Cherry On Top" alongside their cover of "Joy To The World." The animated music video highlights Filipino holiday traditions. <a href="https://news.abs-cbn.com">Read more</a>.
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+  <footer class="footer text-center py-5">
     <div class="container-fluid d-flex justify-content-center">
       <a href="https://kayexnina.github.io/index.html"><img
           src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/myLogo.png" alt="Logo"
@@ -245,6 +709,7 @@
     });
 
   </script>
+
 </body>
 
 </html>

@@ -36,10 +36,6 @@
     scroll-behavior: smooth;
   }
 
-  #widget {
-    display: none;
-  }
-
   .navbar {
     border-bottom: 5px solid var(--primary-color);
     background-color: transparent;
@@ -47,7 +43,7 @@
   }
 
   .navbar.scrolled {
-    border-bottom: 2px solid var(--secondary-color);
+    border-bottom: 5px solid var(--primary-color);
     background-color: var(--secondary-color);
     position: fixed;
     top: 0;
@@ -690,6 +686,10 @@
     </div>
   </div>
 
+  <!-- Contact Form -->
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <div class="elfsight-app-f51766b3-7b2d-4de0-8b4d-fcd4b40d0af8" id="contact" data-elfsight-app-lazy></div>
+
   <!-- Footer -->
   <footer class="footer text-center py-5">
     <div class="container-fluid d-flex justify-content-center">
@@ -713,14 +713,6 @@
       </a>
     </div>
   </footer>
-
-  <!-- To Top -->
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div id="widget" class="elfsight-app-c14266a7-2243-400a-9749-76303b60ce45" data-elfsight-app-lazy></div>
-
-  <!-- Contact Form -->
-  <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-f51766b3-7b2d-4de0-8b4d-fcd4b40d0af8" id="contact" data-elfsight-app-lazy></div>
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
@@ -887,14 +879,6 @@
       link.click();
       document.body.removeChild(link);
     }
-
-    //To Top
-    window.addEventListener('scroll', function () {
-      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        document.getElementById('widget').style.display = 'block';
-      }
-    });
-
   </script>
 </body>
 

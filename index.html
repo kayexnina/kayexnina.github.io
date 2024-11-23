@@ -36,6 +36,10 @@
     scroll-behavior: smooth;
   }
 
+  #widget {
+    display: none;
+  }
+
   .navbar {
     border-bottom: 5px solid var(--primary-color);
     background-color: transparent;
@@ -397,9 +401,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#works">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
         </ul>
       </div>
     </div>
@@ -715,7 +716,7 @@
 
   <!-- To Top -->
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
-  <div class="elfsight-app-c14266a7-2243-400a-9749-76303b60ce45" data-elfsight-app-lazy></div>
+  <div id="widget" class="elfsight-app-c14266a7-2243-400a-9749-76303b60ce45" data-elfsight-app-lazy></div>
 
   <!-- Contact Form -->
   <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -887,27 +888,13 @@
       document.body.removeChild(link);
     }
 
-    //Contact
-    document.addEventListener('DOMContentLoaded', function () {
-      // Get the contact link and Elfsight form container
-      const contactLink = document.getElementById('contact-link');
-      const contactForm = document.querySelector('.elfsight-app-f51766b3-7b2d-4de0-8b4d-fcd4b40d0af8');
-
-      // Ensure the form is hidden initially if needed
-      contactForm.style.display = 'none'; // Hide by default, if applicable
-
-      // Add a click event to show the Elfsight form
-      contactLink.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default behavior (scrolling to #contact)
-
-        // Toggle the visibility of the contact form
-        if (contactForm.style.display === 'none' || contactForm.style.display === '') {
-          contactForm.style.display = 'block'; // Show the form
-        } else {
-          contactForm.style.display = 'none'; // Hide the form (if you want to toggle)
-        }
-      });
+    //To Top
+    window.addEventListener('scroll', function () {
+      if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        document.getElementById('widget').style.display = 'block';
+      }
     });
+
   </script>
 </body>
 

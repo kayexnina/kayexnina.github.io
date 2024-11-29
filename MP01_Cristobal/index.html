@@ -168,6 +168,10 @@
     z-index: 2;
   }
 
+  .bini-text {
+    font-size: medium;
+  }
+
   .imgContainer {
     width: 150px;
     height: 150px;
@@ -299,9 +303,18 @@
     transform: rotate(360deg) scale(1.5);
   }
 
+  /* Media query for smaller screens */
   @media (max-width: 576px) {
+    .bini-text {
+      font-size: 12px;
+    }
+
     .card-title {
       font-size: medium;
+    }
+
+    .article-title {
+      font-size: 14px;
     }
   }
 </style>
@@ -343,15 +356,15 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </iframe>
-
     <div class="bannercolor">
     </div>
+
     <div class="container-fluid d-flex justify-content-center align-items-center">
-      <div class="row justify-content-center align-items-center text-center" style="height: 100vh;">
+      <div class="row justify-content-center align-items-center text-center" style="height: 100vh">
         <div class="col-10 col-lg-6 col-md-8">
           <div class="card p-4">
             <h1 class="display-5" style="font-weight: 700; color: var(--secondary-color);">BINI</h1>
-            <p class="text-center text-light" style="font-size: medium;">
+            <p class="text-center text-light bini-text">
               BINI is a rising Filipino girl group whose name comes from the word binibini, meaning "young lady." The
               group is composed of talented members: Aiah, Colet, Gwen, Jhoanna, Maloi, Mikha, Sheena, and Stacey.
               Despite their diverse personalities, origins, and beliefs, they come together in perfect harmony, united
@@ -371,7 +384,7 @@
   <!-- Members Section -->
   <div class="container">
     <div class="row my-4">
-      <h1 class="display-3 text-center" style="font-weight: 700;">
+      <h1 class="display-3 text-center" style="font-weight: 700">
         <img
           src="https://raw.githubusercontent.com/kayexnina/kayexnina.github.io/refs/heads/main/MP01_Cristobal/assets/biniLogo.png"
           alt="BINI Logo" class="logo-img"> Members
@@ -612,7 +625,7 @@
   <!-- Music Section -->
   <div class="container" id="music">
     <div class="row my-5">
-      <h1 class="display-3 text-center" style="font-weight: 700;"> Top Songs
+      <h1 class="display-3 text-center" style="font-weight: 700"> Top Songs
       </h1>
     </div>
     <script src="https://static.elfsight.com/platform/platform.js" async></script>
@@ -621,7 +634,7 @@
 
   <div class="container" id="articles">
     <div class="row my-5">
-      <h1 class="display-3 text-center" style="font-weight: 700;"> Articles
+      <h1 class="display-3 text-center" style="font-weight: 700"> Articles
       </h1>
     </div>
 

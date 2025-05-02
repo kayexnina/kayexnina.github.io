@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buzzing Beats</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./logo.png" type="image">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Rubik:wght@400;500;600;700&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+ 
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <h1>
+        <a href="#" class="logo">Buzzing Beats<span class="span">.</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="nav-item">
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#groups" class="navbar-link" data-nav-link>PPOP Groups</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a href="#about" class="navbar-link" data-nav-link>Contact Us</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-btn-group">
+        <button class="search-btn" aria-label="Search" data-search-btn>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <button class="btn btn-hover">Login</button>
+
+        <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
+          <span class="line top"></span>
+          <span class="line middle"></span>
+          <span class="line bottom"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- 
+    - #SEARCH BOX
+  -->
+
+  <div class="search-container" data-search-container>
+    <div class="search-box">
+      <input type="search" name="search" aria-label="Search here" placeholder="Type keywords here..."
+        class="search-input">
+      <button class="search-submit" aria-label="Submit search" data-search-submit-btn>
+        <ion-icon name="search-outline"></ion-icon>
+      </button>
+    </div>
+    <button class="search-close-btn" aria-label="Cancel search" data-search-close-btn></button>
+  </div>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" style="background-image: url('./assets/images/main_banner.png')">
+        <div class="container">
+          <div class="hero-content">
+            <h2 class="h1 hero-title">Grab Your Seats, Feel the Heat –</h2>
+            <p class="hero-text">Buzzing Beats, Your PPOP Treat!</p>
+            <button class="btn" id="order-now-btn1">Order Now!</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #PROMO
+      -->
+
+      <section class="section section-divider white promo" id="groups">
+        <div class="container">
+          <ul class="promo-list has-scrollbar">
+            <li class="promo-item">
+              <div class="promo-card">
+                <div class="card-icon">
+                  <h3 class="h3 card-title">BINI</h3>
+                  <p class="card-text">
+                    A rising Filipino girl group known for their catchy songs and synchronized performances.
+                  </p>
+                  <img src="./assets/images/bini.png" width="300" height="300" loading="lazy" alt="bini"
+                    class="w-100 card-banner">
+                </div>
+              </div>
+            </li>
+            <li class="promo-item">
+              <div class="promo-card">
+                <h3 class="h3 card-title">SB19</h3>
+                <p class="card-text">
+                  A multi-awarded Filipino boy group known for their trailblazing P-Pop (Pinoy Pop) sound.
+                </p>
+                <img src="./assets/images/sb19.png" width="300" height="300" loading="lazy" alt="sb19"
+                  class="w-100 card-banner">
+              </div>
+            </li>
+            <li class="promo-item">
+              <div class="promo-card">
+                <h3 class="h3 card-title">LITZ</h3>
+                <p class="card-text">
+                  A four-member Filipino girl group known for their debut single "KIDLAT," which means "lightning."
+                </p>
+                <img src="./assets/images/litz.png" width="300" height="300" loading="lazy" alt="litz"
+                  class="w-100 card-banner">
+              </div>
+            </li>
+            <li class="promo-item">
+              <div class="promo-card">
+                <h3 class="h3 card-title">ALAMAT</h3>
+                <p class="card-text">
+                  A Filipino boy band known for their P-Pop hits, powerful vocals and singing in various local
+                  languages.
+                </p>
+                <img src="./assets/images/alamat.png" width="300" height="300" loading="lazy" alt="alamat"
+                  class="w-100 card-banner">
+              </div>
+            </li>
+            <li class="promo-item">
+              <div class="promo-card">
+                <h3 class="h3 card-title">PPOP GEN</h3>
+                <p class="card-text">
+                  A Filipino girl group known for their personalities, energetic performances and catchy P-Pop tunes.
+                </p>
+                <img src="./assets/images/ppop_gen.png" width="300" height="300" loading="lazy" alt="ppop gen"
+                  class="w-100 card-banner">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="section section-divider white cta" style="background-image: url('./assets/images/concert2.png')" id="about">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="h2 section-title">
+              So, what are you
+              <span class="span">waiting for?</span>
+            </h2>
+            <p class="section-text">
+              Get ready to experience the electrifying energy of PPOP concerts! Order your tickets now on Buzzing Beats
+              and secure your spot for an unforgettable musical journey.
+            </p>
+            <button class="btn btn-hover" id="order-now-btn2">Order Now!</button>
+          </div>
+          <figure class="cta-banner">
+            <img src="./assets/images/ticket.png" width="700" height="637" loading="lazy" alt="ticket"
+              class="w-100 cta-img">
+          </figure>
+        </div>
+      </section>
+    </article>
+  </main>
+
+<!-- Order Form Modal -->
+<div id="orderModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Order Form</h2>
+    <form id="orderForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        <div class="invalid-feedback">Name is required.</div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <div class="invalid-feedback">Valid email is required.</div>
+      </div>
+      <div class="form-group">
+        <label for="concert">Select Concert:</label>
+        <select id="concert" name="concert" required>
+          <option value="">Select...</option>
+          <option value="bini">BINI</option>
+          <option value="sb19">SB19</option>
+          <option value="litz">LITZ</option>
+          <option value="alamat">ALAMAT</option>
+          <option value="ppop_gen">PPOP GEN</option>
+        </select>
+        <div class="invalid-feedback">Please select a concert.</div>
+      </div>
+      <div class="form-group">
+        <label for="tickets">Number of Tickets</label>
+        <input type="number" id="tickets" name="tickets" min="1" required>
+        <div class="invalid-feedback">Number of tickets must be at least 1.</div>
+      </div>
+      <div class="form-group">
+        <label for="ticketArea">Seat Plan</label>
+        <select id="ticketArea" name="ticketArea" required>
+          <option value="">Select seat plan...</option>
+          <option value="VVIP">VVIP</option>
+          <option value="VIP">VIP</option>
+          <option value="PATRON A">PATRON A</option>
+          <option value="PATRON B">PATRON B</option>
+          <option value="LOWER BOX">LOWER BOX</option>
+          <option value="GEN AD">GEN AD</option>
+        </select>
+        <div class="invalid-feedback">Please select a seat plan.</div>
+      </div>
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+  <div class="background_error">
+    <div class="error-content">
+      <p>Oops! Looks like the beat dropped and the page didn't catch up.</p>
+      <p>Let's get you back in rhythm – head back to our homepage and groove on!</p>
+    </div>
+  </div>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top" style="background-image: var(--white)">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="" class="logo">Buzzing Beats<span class="span">.</span></a>
+
+          <p class="footer-text">
+            Don't miss out – join the excitement and order through our website today
+            for the best seats and exclusive deals!"
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; 2024 <a href="#" class="copyright-link">KNC</a> All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

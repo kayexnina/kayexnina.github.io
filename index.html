@@ -152,6 +152,53 @@
     text-decoration: none;
   }
 
+/* Skills logos */
+#skills .logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+#skills .logo {
+  flex: 0 0 auto;
+}
+
+#skills .logo img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+#skills .logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  #skills .logo img {
+    height: 75px;
+  }
+
+  #skills .logo-row {
+    gap: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  #skills .logo img {
+    height: 60px;
+  }
+
+  #skills .logo-row {
+    gap: 0.75rem;
+  }
+}
+
   #timeline ul li {
     position: relative;
     width: 0;
@@ -411,13 +458,13 @@
           Hello, I'm <br />
           <span class="display-3 auto-type" style="font-weight: 700"></span>
         </h1>
-        <p>
+        <!-- <p>
           Bachelor of Science in Information Technology
           <br />
           Magna Cum Laude
           <br />
           Polytechnic University of the Philippines - Sto. Tomas Campus
-        </p>
+        </p> -->
         <a href="#timeline" class="btn display-3 rounded-4 py-2 px-4" style="width: auto"><strong>Learn
             More</strong></a>
       </div>
@@ -434,7 +481,7 @@
       <h1 class="display-4 text-center">Educational Background</h1>
     </div>
     <ul class="list-unstyled mt-n5">
-      <h3 class="fs-4 my-2">2021 - Present</h3>
+      <h3 class="fs-4 my-2">2021 - 2025</h3>
       <li>
         <div>
           <div>
@@ -497,160 +544,185 @@
   </section>
 
   <!-- Skills -->
-  <div id="skills" class="container-fluid my-5 py-5" style="background-color: var(--secondary-color)">
-    <div class="row justify-content-center text-center">
-      <h1 class="display-4 text-center mb-5" style="color: var(--background-color); font-weight: 700;">
-        My Skill-Building Apps and Languages
-      </h1>
+<div id="skills" class="container-fluid my-5 py-5" style="background-color: var(--secondary-color)">
+  <div class="row justify-content-center text-center">
+    <!-- Changed header from "My Skill-Building Apps and Languages" to "Technical Skills & Technologies" -->
+    <h1 class="display-4 text-center mb-5" style="color: var(--background-color); font-weight: 700;">
+      Technical Skills &amp; Technologies
+    </h1>
 
-      <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#programmingLanguages"
-        aria-expanded="false" aria-controls="programmingLanguages"
-        style="color: var(--background-color); cursor: pointer;" id="programmingDropdownHeader">
-        Programming Languages
-        <i class="bi bi-chevron-down" id="programmingDropdownIcon"
-          style="font-size: 1.5rem; transition: transform 0.3s;"></i>
-      </h2>
+    <!-- Programming Languages - retained as is -->
+    <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#programmingLanguages"
+      aria-expanded="false" aria-controls="programmingLanguages"
+      style="color: var(--background-color); cursor: pointer;" id="programmingDropdownHeader">
+      Programming Languages
+      <i class="bi bi-chevron-down" id="programmingDropdownIcon"
+        style="font-size: 1.5rem; transition: transform 0.3s;"></i>
+    </h2>
 
-      <div class="collapse" id="programmingLanguages">
-        <div class="row justify-content-center">
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/java-logo.png"
-              class="img-fluid" alt="Java Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/c-logo.png"
-              class="img-fluid" alt="C Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://github.com/kayexnina/SAM03_Cristobal/blob/main/cpp-logo.png?raw=true" class="img-fluid"
-              alt="C++ Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/csharp.png"
-              class="img-fluid" alt="C# Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/python-logo.png"
-              class="img-fluid" alt="Python Logo" style="max-height: 100px" />
-          </div>
-
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/kotlin-logo.png"
-              class="img-fluid" alt="Kotlin Logo" style="max-height: 100px" />
-          </div>
-
-           <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/swift-logo.png"
-              class="img-fluid" alt="Swift Logo" style="max-height: 100px" />
-          </div>
+    <div class="collapse" id="programmingLanguages">
+      <div class="logo-row">
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/java-logo.png"
+            class="img-fluid" alt="Java Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/c-logo.png"
+            class="img-fluid" alt="C Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://github.com/kayexnina/SAM03_Cristobal/blob/main/cpp-logo.png?raw=true" class="img-fluid"
+            alt="C++ Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/csharp.png"
+            class="img-fluid" alt="C# Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/python-logo.png"
+            class="img-fluid" alt="Python Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/kotlin-logo.png"
+            class="img-fluid" alt="Kotlin Logo" style="max-height: 100px" />
+        </div>
+       <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/swift-logo.png"
+            class="img-fluid" alt="Swift Logo" style="max-height: 100px" />
         </div>
       </div>
+    </div>
 
-      <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#webTechnologies"
-        aria-expanded="false" aria-controls="webTechnologies" style="color: var(--background-color); cursor: pointer;"
-        id="webDropdownHeader">
-        Web Technologies
-        <i class="bi bi-chevron-down" id="webDropdownIcon" style="font-size: 1.5rem; transition: transform 0.3s;"></i>
-      </h2>
+    <!-- Web Technologies - retain, added git and github logos -->
+    <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#webTechnologies"
+      aria-expanded="false" aria-controls="webTechnologies" style="color: var(--background-color); cursor: pointer;"
+      id="webDropdownHeader">
+      Web Technologies
+      <i class="bi bi-chevron-down" id="webDropdownIcon" style="font-size: 1.5rem; transition: transform 0.3s;"></i>
+    </h2>
 
-      <div class="collapse" id="webTechnologies">
-        <div class="row justify-content-center">
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/html-logo.png"
-              class="img-fluid" alt="HTML Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/css-logo.png"
-              class="img-fluid" alt="CSS Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/js-logo.png"
-              class="img-fluid" alt="JS Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/php-logo.png"
-              class="img-fluid" alt="PHP Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/sql-logo.png"
-              class="img-fluid" alt="SQL Logo" style="max-height: 100px" />
-          </div>
+    <div class="collapse" id="webTechnologies">
+      <div class="logo-row">
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/html-logo.png"
+            class="img-fluid" alt="HTML Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/css-logo.png"
+            class="img-fluid" alt="CSS Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/js-logo.png"
+            class="img-fluid" alt="JS Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/php-logo.png"
+            class="img-fluid" alt="PHP Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/sql-logo.png"
+            class="img-fluid" alt="SQL Logo" style="max-height: 100px" />
+        </div>
+        <!-- Added Git logo -->
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/git-logo.png"
+            class="img-fluid" alt="Git Logo" style="max-height: 100px" />
+        </div>
+        <!-- Added GitHub logo -->
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/github-logo.png"
+            class="img-fluid" alt="GitHub Logo" style="max-height: 100px" />
         </div>
       </div>
+    </div>
 
-      <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#designApplications"
-        aria-expanded="false" aria-controls="designApplications"
-        style="color: var(--background-color); cursor: pointer;" id="designDropdownHeader">
-        Design & Applications
-        <i class="bi bi-chevron-down" id="designDropdownIcon"
-          style="font-size: 1.5rem; transition: transform 0.3s;"></i>
-      </h2>
+    <!-- Design -> changed header to "Design" (removed Visual Basic and Studio from here, they moved to Applications) -->
+    <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#designApplications"
+      aria-expanded="false" aria-controls="designApplications"
+      style="color: var(--background-color); cursor: pointer;" id="designDropdownHeader">
+      Design
+      <i class="bi bi-chevron-down" id="designDropdownIcon"
+        style="font-size: 1.5rem; transition: transform 0.3s;"></i>
+    </h2>
 
-      <div class="collapse" id="designApplications">
-        <div class="row justify-content-center">
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/photoshop-logo.png"
-              class="img-fluid" alt="Photoshop Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/illustrator-logo.png"
-              class="img-fluid" alt="Illustrator Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/canva-logo.png"
-              class="img-fluid" alt="Canva Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/figma-logo.png"
-              class="img-fluid" alt="Figma Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/visual-basic-logo.png"
-              class="img-fluid" alt="Visual Basic Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 logo">
-            <img
-              src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/visual-studio-logo.png"
-              class="img-fluid" alt="Visual Studio Logo" style="max-height: 100px" />
-          </div>
+    <div class="collapse" id="designApplications">
+      <div class="logo-row">
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/photoshop-logo.png"
+            class="img-fluid" alt="Photoshop Logo" style="max-height: 100px" />
         </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/illustrator-logo.png"
+            class="img-fluid" alt="Illustrator Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/canva-logo.png"
+            class="img-fluid" alt="Canva Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/figma-logo.png"
+            class="img-fluid" alt="Figma Logo" style="max-height: 100px" />
+        </div>
+        <!-- Note: visual-basic and visual-studio logos removed from here as requested -->
       </div>
+    </div>
 
-      <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#others" aria-expanded="false"
-        aria-controls="others" style="color: var(--background-color); cursor: pointer;" id="othersDropdownHeader">
-        Others
-        <i class="bi bi-chevron-down" id="othersDropdownIcon"
-          style="font-size: 1.5rem; transition: transform 0.3s;"></i>
-      </h2>
+    <!-- Others -> changed to "Applications" and added visual basic, visual studio, android studio, xcode -->
+    <h2 class="text-center fw-bold mb-4" data-bs-toggle="collapse" data-bs-target="#others" aria-expanded="false"
+      aria-controls="others" style="color: var(--background-color); cursor: pointer;" id="othersDropdownHeader">
+      Applications
+      <i class="bi bi-chevron-down" id="othersDropdownIcon"
+        style="font-size: 1.5rem; transition: transform 0.3s;"></i>
+    </h2>
 
-      <div class="collapse" id="others">
-        <div class="row justify-content-center">
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/wordpress-logo.png"
-              class="img-fluid" alt="WordPress Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/mongo-logo.png"
-              class="img-fluid" alt="MongoDB Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/jira-logo.png"
-              class="img-fluid" alt="Jira Logo" style="max-height: 100px" />
-          </div>
-          <div class="col-6 col-md-2 my-2 mb-3 logo">
-            <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/obs-logo.png"
-              class="img-fluid" alt="OBS Logo" style="max-height: 100px" />
-          </div>
+    <div class="collapse" id="others">
+      <div class="logo-row">
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/wordpress-logo.png"
+            class="img-fluid" alt="WordPress Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/mongo-logo.png"
+            class="img-fluid" alt="MongoDB Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/jira-logo.png"
+            class="img-fluid" alt="Jira Logo" style="max-height: 100px" />
+        </div>
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/obs-logo.png"
+            class="img-fluid" alt="OBS Logo" style="max-height: 100px" />
+        </div>
+        <!-- Added Visual Basic logo (moved from Design) -->
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/visual-basic-logo.png"
+            class="img-fluid" alt="Visual Basic Logo" style="max-height: 100px" />
+        </div>
+        <!-- Added Visual Studio logo (moved from Design) -->
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/visual-studio-logo.png"
+            class="img-fluid" alt="Visual Studio Logo" style="max-height: 100px" />
+        </div>
+        <!-- Added Android Studio logo -->
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/androidstudio-logo.png"
+            class="img-fluid" alt="Android Studio Logo" style="max-height: 100px" />
+        </div>
+        <!-- Added Xcode logo -->
+        <div class="logo">
+          <img src="https://raw.githubusercontent.com/kayexnina/SAM03_Cristobal/refs/heads/main/xcode-logo.png"
+            class="img-fluid" alt="Xcode Logo" style="max-height: 100px" />
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <div class="container text-center mt-4" id="resume">
-    <a href="#" onclick="downloadResume()" class="btn display-3 rounded-2 py-3 px-4">
-      Download My Resume (PDF)
-    </a>
-  </div>
+<div class="container text-center mt-4" id="resume">
+  <a href="javascript:void(0)" onclick="downloadResume()" class="btn display-3 rounded-2 py-3 px-4">
+    Download My Resume (PDF)
+  </a>
+</div>
 
   <!-- Works -->
   <div class="container" id="works">
